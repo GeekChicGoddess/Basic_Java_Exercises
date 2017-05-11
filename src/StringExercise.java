@@ -28,7 +28,7 @@ public class StringExercise {
             System.out.println("Sure.");
         }
 
-        else if(response.toUpperCase().equals(response) && response.length()!=0){
+        else if(response.toUpperCase().equals(response) && response.length()!=0 && !response.toLowerCase().equals(response)){
             System.out.println("Whoa, chill out!");
         }
 
