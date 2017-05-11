@@ -17,9 +17,8 @@ public class loopBasics {
 //        System.out.println(i);
 //        i+=2;
 //
-//
-////    }while(i<=100);
-//
+
+//    }while(i<=100);
 //    int j = 100;
 //        do {
 //
@@ -28,7 +27,7 @@ public class loopBasics {
 //
 //
 //        }while(j>=-10);
-
+//
 //
 //        double j = 2;
 //
@@ -48,18 +47,15 @@ public class loopBasics {
 //     System.out.println(j);
 // }
 
-        for (int k = 1; k < 100; k++){
+        for (int k = 1; k < 100; k++) {
 
-            if (k%15 == 0) {
+            if (k % 15 == 0) {
                 System.out.println("fizzbuzz");
-            }
-            else if (k%3==0){
+            } else if (k % 3 == 0) {
                 System.out.println("fizz");
-            }
-            else if (k%5==0){
+            } else if (k % 5 == 0) {
                 System.out.println("buzz");
-            }
-            else {
+            } else {
                 System.out.println(k);
             }
         }
@@ -71,34 +67,45 @@ public class loopBasics {
 //        F : 60 - 0
         Scanner input = new Scanner(System.in);
         int grade = -1;
-        while (grade < 0 || grade > 100 ){
+        while (grade < 0 || grade > 100) {
             System.out.println("Enter a grade between 0-100");
             grade = input.nextInt();
-        }
 
-        if (grade >= 0 && grade <= 59){
-            System.out.println("Grade is an E");
 
-        }
+            if (grade >= 0 && grade <= 59) {
+                System.out.println("Grade is an E");
 
-        else if (grade >= 60 && grade <= 66){
-            System.out.println("Grade is a D");
+            } else if (grade >= 60 && grade <= 66) {
+                System.out.println("Grade is a D");
 
-        }
+            } else if (grade >= 67 && grade <= 79) {
+                System.out.println("Grade is an C");
 
-        else if (grade >= 67 && grade <= 79){
-            System.out.println("Grade is an C");
+            } else if (grade >= 80 && grade <= 87) {
+                System.out.println("Grade is an B");
 
-        }
-
-        else if (grade >= 80 && grade <= 87){
-            System.out.println("Grade is an E");
+            } else if (grade >= 88 && grade <= 100) {
+                System.out.println("Grade is an A");
+            }
 
         }
+        String continueYesNo;
 
-        else if (grade >= 88 && grade <= 100){
-            System.out.println("Grade is an E");
-        }
+        do {
+            System.out.println("What is the number to go up to?");
+            int limiter = input.nextInt();
 
+            System.out.println("Here is your table");
+            System.out.println("number | squared | cubed");
+            System.out.println("------ | ------- | -----");
+
+            for (int i = 1; i <= limiter; i++) {
+                //padding
+                System.out.printf("%-7d| %-8s| %d%n", i, i * i, i * i * i);
+            }
+            System.out.println("Do you want to continue");
+            continueYesNo = input.next();
+
+        } while (continueYesNo.equalsIgnoreCase("y"));
     }
 }
