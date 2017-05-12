@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class simpleFactorials {
 
     public static void listFactorials(int number){
-        if (number >=1 && number < 11){
+        if (number >=1 && number < 17){
             int total = 1;
             String factorial = "1";
             for (int i = 1; i <= number; i++) {
@@ -36,7 +36,7 @@ public class simpleFactorials {
         }
     }
 public static void runFactorials(){
-    System.out.println("Please enter a number between 1 and 10");
+    System.out.println("Please enter a number between 1 and 16");
     Scanner input = new Scanner(System.in);
     int number = input.nextInt();
     listFactorials(number);
