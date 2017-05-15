@@ -28,7 +28,7 @@ public class simpleFactorials {
         System.out.println("Do you want to continue? Enter Y or N");
         Scanner newInput = new Scanner(System.in);
         String answer = newInput.nextLine();
-        if (answer.equals("Y")){
+        if (answer.equalsIgnoreCase("Y")){
             runFactorials();
         }
         else {

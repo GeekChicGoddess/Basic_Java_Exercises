@@ -8,6 +8,8 @@ public class GuessingGame {
     static Scanner input = new Scanner(System.in);
     static int numberToGuess = 0;
     static int numberOfGuesses = 0;
+
+
     public static void gameStart(){
 
         numberToGuess = (int)(Math.random() * 100) +1;
